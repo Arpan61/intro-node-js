@@ -44,7 +44,6 @@ const server = http.createServer(async (req, res) => {
   const method = req.method
   const route = url.parse(req.url).pathname
   const match = router[route + " " + method]
-  console.log(match);
   // this is sloppy, especially with more assets, create a "router"
 
   if (!match) {
